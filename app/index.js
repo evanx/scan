@@ -17,7 +17,7 @@ async function main(context) {
             });
         }
     } catch (err) {
-        console.error(err);
+        console.error(clc.yellow.bold(err.message));
     } finally {
         end();
     }
