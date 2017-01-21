@@ -2,6 +2,8 @@
 
 Containerized utility to scan Redis keys, using Node.js
 
+<img src='https://raw.githubusercontent.com/evanx/scan/master/docs/images/readme/scan-help.png'>
+
 ## Config
 
 See app/config.js
@@ -76,10 +78,10 @@ async function end() {
 ```shell
 docker build -t scan https://github.com/evanx/scan.git
 ```
-where tagged as image `scan` 
+where tagged as image `scan`
 
 ```shell
-docker run --network=host -e pattern='*' scan | head 
+docker run --network=host -e pattern='*' scan | head
 ```
 where `--network-host` connects to `localhost` bridge so that the default `redisUrl` of `redis://localhost:6379` works in that case.
 
@@ -87,7 +89,7 @@ As such, you should inspect the source:
 ```shell
 git clone https://github.com/evanx/scan.git
 cd scan
-cat Dockerfile 
+cat Dockerfile
 ```
 ```
 FROM node:7.4.0
