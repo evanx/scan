@@ -79,7 +79,7 @@ docker build -t scan https://github.com/evanx/scan.git
 where tagged as image `scan` 
 
 ```shell
-docker run --network=host -e pattern='authbot:*' scan
+docker run --network=host -e pattern='*' scan | head 
 ```
 where `--network-host` connects to `localhost` bridge so that the default `redisUrl` of `redis://localhost:6379` works in that case.
 
@@ -101,6 +101,7 @@ CMD ["node", "--harmony", "app/index.js"]
 
 Having reviewed the code, you can execute as follows:
 ```
+cat package.json
 npm install
 pattern='*' npm start
 ```
