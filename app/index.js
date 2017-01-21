@@ -12,7 +12,7 @@ async function main(context) {
                 multi.scan(cursor || 0, 'match', config.pattern);
             });
             cursor = parseInt(result[0]);
-            await Promise.map(result[1], async key => {
+            result[1].forEach(key => {
                 console.log(key);
             });
         }
