@@ -1,7 +1,7 @@
 {
-  "name": "hget",
+  "name": "scan",
   "version": "0.1.0",
-  "description": "",
+  "description": "Containerized Redis scan utility using Node.js",
   "main": "app/index.js",
   "scripts": {
     "lint": "eslint --cache src",
