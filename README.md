@@ -22,7 +22,7 @@ module.exports = {
             default: 'redis://localhost:6379'
         },
         logging: {
-            default: 'info',
+            default: 'info'
         },
         pattern: {
             description: 'matching pattern for Redis scan'
@@ -34,6 +34,7 @@ module.exports = {
     }
 };
 ```
+where the default `redisUrl` is `'redis://localhost:6379'`
 
 ## Implementation
 
@@ -98,8 +99,9 @@ ENV NODE_ENV production
 CMD ["node", "--harmony", "app/index.js"]
 ```
 
-Having reviewed the code, you can also execute as follows:
+Having reviewed the code, you can execute as follows:
 ```
+npm install
 pattern='*' npm start
 ```
 
